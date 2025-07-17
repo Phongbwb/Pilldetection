@@ -4,7 +4,7 @@
 ## Mục tiêu
 
 Dự án này cung cấp một pipeline đầy đủ để:
-- Huấn luyện và đánh giá mô hình **Faster R-CNN** trên tập COCO.
+- Huấn luyện các mô hình  **Yolov11, RT-DETR, Faster R-CNN** trên tập epillID.
 - Đánh giá hiệu năng các mô hình:
   - [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
   - [RT-DETR (from HuggingFace)](https://huggingface.co/PekingU/rtdetr_r50vd_coco_o365)
@@ -72,7 +72,7 @@ Pillow
 
 ## Cách sử dụng
 
-### 1. Huấn luyện Faster R-CNN (nếu cần)
+### 1. Huấn luyện các mô hình Ví dụ: Faster R-CNN 
 ```bash
 python train_fasterrcnn.py
 ```
@@ -117,8 +117,8 @@ python metric_model.py
 
 ## Ghi chú
 
-- Dataset yêu cầu cấu trúc `YOLO-format` (`.txt` label theo `[class_id, cx, cy, w, h]`)
-- Nếu bạn dùng định dạng COCO, cần convert sang YOLO format để phù hợp.
+- Dataset yêu cầu cấu trúc `COCO-format` 
+- Chạy split_data.py được các tập training, test, eval có các format YOLO, COCO, VOC.
 
 ## Liên hệ
 
